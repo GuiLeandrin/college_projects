@@ -1,0 +1,61 @@
+# Exercício 1
+print("\n")
+print("Exercicio 1 - Cálculo IMC:")
+peso = float(input("Digite seu peso: "))
+altura = float(input("Digite sua altura: "))
+calculoImc = peso / (altura * altura)
+
+if calculoImc <= 18.5:
+    print(f"Seu IMC é {calculoImc:.2f} e você está Abaixo do peso!!")
+elif calculoImc > 18.5 and calculoImc <= 25:
+    print(f"Seu IMC é {calculoImc:.2f} e você está com o peso Normal!!")
+elif calculoImc > 25 and calculoImc <= 30:
+    print(f"Seu IMC é {calculoImc:.2f} e você está Acima do Peso!!")
+elif calculoImc > 30:
+    print(f"Seu IMC é {calculoImc:.2f} e você está Obeso!!")
+
+
+# Exercício 2
+print("\n")
+print("Exercicio 2 - Verificação Triângulo:")
+lado1 = float(input("Digite o primeiro lado de um triângulo em cm: "))
+lado2 = float(input("Digite o segundo lado de um triângulo em cm: "))
+lado3 = float(input("Digite o terceiro lado de um triângulo em cm: "))
+
+if lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1:
+    print("Os lados informados resultam em um triângulo!! :)")
+else:
+    print("Os lados informados não resultam em um triângulo!! :(")
+
+
+# Exercício 3
+print("\n")
+print("Exercicio 3 - Localização de Quadrante:") 
+pontoX = float(input("Digite a coordenada X do seu ponto: "))
+pontoY = float(input("Digite a coordenada Y do seu ponto: "))
+
+if pontoX == 0 and pontoY == 0:
+    print("Seu ponto está na Origem!")
+elif pontoX == 0 and pontoY > 0:
+    print("Seu ponto está Para Cima!")
+elif pontoX == 0 and pontoY < 0:
+    print("Seu ponto está Para Baixo!")
+elif pontoY == 0 and pontoX > 0:    
+    print("Seu ponto está a Direita!")
+elif pontoY == 0 and pontoX < 0:
+    print("Seu ponto está a Esquerda!")
+elif pontoX > 0 and pontoY > 0:
+    print("Seu ponto está no 1°Quadrante!")
+elif pontoX < 0 and pontoY > 0:
+    print("Seu ponto está no 2°Quadrante!")
+elif pontoX < 0 and pontoY < 0:
+    print("Seu ponto está no 3°Quadrante!")
+elif pontoX > 0 and pontoY < 0:
+    print("Seu ponto está no 4°Quadrante!")
+else:
+    print("Erro a Encontrar Localização de Ponto!")
+
+
+# Exercício 4
+print("\n")
+print("Exercicio 4 - Identificação de Signo:") 
