@@ -1,3 +1,4 @@
+print("\nBem Vindo a Lista 1 de Exercícios em Python:")
 while True:
     escolherExercicio = int(input("\nDigite qual exercício deseja realizar (1, 2, 3, 4 ou 5) (0 = Finaliza o Programa): "))
     if escolherExercicio == 1:
