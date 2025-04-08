@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisa Alunos</title>
+    <title>Pesquisa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body class="container mt-5">
-    <a href="aluno_novo.php" class="btn btn-success">NOVO</a>
     <h2 class="mb-4">Pesquisa Alunos!</h2>
     <p class="mb-3">Para consultar os alunos que você deseja encontrar, selecione o nome no campo abaixo e clique em pesquisa:</p>
-    <form action="" method="get">
+    <form action="" method="POST">
         <div class="form-group">
-            <label for="nome">Nome do Aluno</label>
+            <label for="nome">Nome do Aluno:</label>
             <input type="text" class="form-control" id="nome" placeholder="Digite o nome do aluno:" name="nome">
         </div>
-        <button type="submit" class="btn btn-secondary">Pesquisar</button>
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+        <a href="aluno_novo.php" class="btn btn-success">Cadastrar novo Aluno</a>
     </form>
     <br><br>
     <table class="table table-bordered table-striped">
@@ -31,8 +31,8 @@
             <?php
                 $conexao = new mysqli("localhost", "root", "", "ite");
                 $nome = "";
-                if (isset($_GET['nome'])) {
-                    $nome = $_GET['nome'];
+                if (isset($_POST['nome'])) {
+                    $nome = $_POST['nome'];
                 }
                 $sql = "SELECT * FROM alunos WHERE nome like '%$nome%'";
                 $pesquisa = $conexao->query($sql);
