@@ -1,0 +1,2 @@
+Guilherme, Média: 5.0, Status: Reprovado
+João, Média: 7.5, Status: Aprovado
